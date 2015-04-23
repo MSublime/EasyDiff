@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Guide - EasyDiff Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_custom.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> EasyDiff Documentation</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="..">Home</a>
+                
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 current">
+                <a class="current" href="./">User Guide</a>
+                
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#usage">Usage</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#general-settings">General Settings</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#dynamic-menu">Dynamic Menu</a></li>
+                        
+                            <li><a class="toctree-l4" href="#excluding-dynamic-menu-from-certain-ui-elements">Excluding Dynamic Menu from Certain UI Elements</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#version-control-setup">Version Control Setup</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#diffing-with-external-diff-tools">Diffing with External Diff Tools</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#hiding-external-or-internal-diffing-from-context-menu">Hiding External or Internal Diffing from Context Menu</a></li>
+                        
+                    
+                    </ul>
+                
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../license/">License</a>
+                
+            </li>
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">EasyDiff Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+    <li>User Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="https://github.com/facelessuser/EasyDiff" class="icon icon-github"> Edit on GitHub</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              <h1 id="usage"><a name="user-content-usage" href="#usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Usage</h1>
+<p>Easy diff is easy to use.  Simply select the <code>Set Left Side</code> option in the context menus to set what is to be compared on the left side when in a view.  Then select the what to compare to via <code>Compare with</code> menu option (select the right side view first if comparing to a view).</p>
+<p>For version control, just select the applicable option when in a view that is versioned controlled.</p>
+<h1 id="general-settings"><a name="user-content-general-settings" href="#general-settings" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>General Settings</h1>
+<p>Easy diff, by default, shows diffs in a spearate view, you can display the diff in an output panel if desired using the following setting:</p>
+<div class="codehilite"><pre>    <span class="c1">// If enabled, this allows for multiple selections.</span>
+    <span class="c1">// Each selection is separated with a new line.</span>
+    <span class="s2">&quot;multi_select&quot;</span><span class="o">:</span> <span class="kc">false</span>
+</pre></div>
+
+
+<p>Easy allows for diffing with the clipboard selections, and multi-selections.  These all can be turned off or on as desired:</p>
+<div class="codehilite"><pre>    <span class="c1">// Use a buffer instead of the output panel</span>
+    <span class="s2">&quot;use_buffer&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Enable clipboard commands</span>
+    <span class="s2">&quot;use_clipboard&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Enable selection commands</span>
+    <span class="s2">&quot;use_selections&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</pre></div>
+
+
+<h1 id="dynamic-menu"><a name="user-content-dynamic-menu" href="#dynamic-menu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dynamic Menu</h1>
+<p>Easy diff creates a dynamic menu in <code>User/EasyDiff/Context.sublime-menu</code>, <code>User/EasyDiff/Tab Context.sublime-menu</code>, and <code>User/EasyDiff/Side Bar.sublime-menu</code>.  The content of this context menu changes depending on what is enabled or disabled, hidden or shown, and depending on whether a view, selection, or clipboard has been selected for left side compare.  If a view that was previously set has been closed, that view will no longer be reported in the context menu.  You can look here to see how the commands are constructed if you would like to bind the options to shortcuts or to the command palette.</p>
+<h2 id="excluding-dynamic-menu-from-certain-ui-elements"><a name="user-content-excluding-dynamic-menu-from-certain-ui-elements" href="#excluding-dynamic-menu-from-certain-ui-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Excluding Dynamic Menu from Certain UI Elements</h2>
+<p>Easy diff shows access commands in the view, tab, and sidebar context menu.  If it is desired to exclude access in one of these UI elements, you can remove the element from the following setting:</p>
+<div class="codehilite"><pre>    <span class="c1">// Menus to show (view|tab|sidebar)</span>
+    <span class="s2">&quot;menu_types&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;view&quot;</span><span class="p">,</span> <span class="s2">&quot;tab&quot;</span><span class="p">,</span> <span class="s2">&quot;sidebar&quot;</span><span class="p">],</span>
+</pre></div>
+
+
+<h1 id="version-control-setup"><a name="user-content-version-control-setup" href="#version-control-setup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Version Control Setup</h1>
+<p>EasyDiff currently supports SVN, Git, and Mercurial.  These options should only appear in the context menus if EasyDiff can find the binaries <code>svn</code>, <code>git</code>, and <code>hg</code> respectively.</p>
+<p>If one of these options shows up, and you wish to disable them, you can go to your settings file and disable them completely with the following settings:</p>
+<div class="codehilite"><pre>    <span class="c1">// Turn off svn completely</span>
+    <span class="s2">&quot;svn_disabled&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Turn off git completely</span>
+    <span class="s2">&quot;git_disabled&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Turn off (Mercurial) hg completely</span>
+    <span class="s2">&quot;hg_disabled&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</pre></div>
+
+
+<p>If you would simply like to hide the options (because you have bound their operations to a shortcut or to the command palette), you can hide the options without disabling them:</p>
+<div class="codehilite"><pre>    <span class="c1">// Turn off svn menu access</span>
+    <span class="s2">&quot;svn_hide_menu&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Turn off git menu access</span>
+    <span class="s2">&quot;git_hide_menu&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// Turn off (Mercurial) hg menu access</span>
+    <span class="s2">&quot;hg_hide_menu&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</pre></div>
+
+
+<p>If your binaries are not in your system&rsquo;s path, you will need to configure the following settings with the path to your binaries:</p>
+<div class="codehilite"><pre>    <span class="c1">// SVN path</span>
+    <span class="s2">&quot;svn&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+
+    <span class="c1">// Git Path</span>
+    <span class="s2">&quot;git&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+
+    <span class="c1">// (Mercurial) Hg path</span>
+    <span class="s2">&quot;hg&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+</pre></div>
+
+
+<p>Currently, by default, EasyDiff will check if the current view is versioned controlled by one of your enabled version control options when displaying the context menu.  This allows the for non-pertinent options to be grayed out.  With some version control systems, this can occasionally cause a lag when displaying those options.  You can turn off this functionality if it becomes a problem with the following settings:</p>
+<div class="codehilite"><pre>    <span class="c1">// Do not perform a version check on files</span>
+    <span class="c1">// when evaluating whether version control</span>
+    <span class="c1">// commands are enabled.  May avoid slowing</span>
+    <span class="c1">// down context menu draw in large version</span>
+    <span class="c1">// controlled projects.</span>
+    <span class="s2">&quot;skip_version_check_on_is_enabled&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</pre></div>
+
+
+<h1 id="diffing-with-external-diff-tools"><a name="user-content-diffing-with-external-diff-tools" href="#diffing-with-external-diff-tools" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Diffing with External Diff Tools</h1>
+<p>Easy diff, by default, has options to diff everything internally in a single view.  But, it can be configured to diff in external tools instead.</p>
+<p>Configure the external binary setting to point to diff tool binary, and then enable external diff options:</p>
+<div class="codehilite"><pre>    <span class="c1">// Show external options (options to send files to external diff tool)</span>
+    <span class="s2">&quot;show_external&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+
+    <span class="c1">// External diff tool path (absolute)</span>
+    <span class="s2">&quot;external_diff&quot;</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+</pre></div>
+
+
+<p>The external option assumes the diff the tool takes arguments as such: <code>tool file1 file2</code>.  If this is not the case, you will probably have to wrap the command in a shell script that takes the options as described, and call it directly instead.  For instance, using DeltaWalker on Mac, I copied their provided workflow configuration to a shell script, and call it directly:</p>
+<div class="codehilite"><pre><span class="c">#!/bin/sh</span>
+<span class="nv">DW_PATH</span><span class="o">=</span>/Applications/DeltaWalker.app/Contents/MacOS
+
+java -Ddw.path<span class="o">=</span><span class="nv">$DW_PATH</span> -jar <span class="nv">$DW_PATH</span>/dw.jar <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$3</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$4</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$5</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="nv">$6</span><span class="s2">&quot;</span>
+</pre></div>
+
+
+<h1 id="hiding-external-or-internal-diffing-from-context-menu"><a name="user-content-hiding-external-or-internal-diffing-from-context-menu" href="#hiding-external-or-internal-diffing-from-context-menu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hiding External or Internal Diffing from Context Menu</h1>
+<p>EasyDiff allows you to hide either internal diffing options, external diffing options, or both.  The later options is useful if you do not use the context menu, but have bound the commands to keyboard shortcuts or to the command palette.</p>
+<p>The settings are:<br />
+<div class="codehilite"><pre>    <span class="c1">// Show internal diff options (Easy Diff in a view or buffer)</span>
+    <span class="s2">&quot;show_internal&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="c1">// Show external options (options to send files to external diff tool)</span>
+    <span class="s2">&quot;show_external&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</pre></div>
+</p>
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../license/" class="btn btn-neutral float-right" title="License"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    
+    Copyright &copy; 2013 - 2015 <a href="https://github.com/facelessuser">Isaac Muse</a>
+    
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+    
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+            <a href="https://github.com/facelessuser/EasyDiff" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+        
+      <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../license/" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+
+<!--
+MkDocs version  : 0.12.2
+Docs Build Date : 2015-04-23 05:58:56.170379
+-->
+</body>
+</html>
