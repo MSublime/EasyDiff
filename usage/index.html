@@ -41,61 +41,63 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-      <ul class="current">
-    
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">About EasyDiff</a>
         
-            <li class="toctree-l1 ">
-                <a class="" href="..">Home</a>
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../installation/">Installation</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">User Guide</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#user-guide">User Guide</a></li>
                 
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 current">
-                <a class="current" href="./">User Guide</a>
+                    <li><a class="toctree-l4" href="#basic-usage">Basic Usage</a></li>
                 
-                    <ul>
-                    
-                        <li class="toctree-l3"><a href="#user-guide">User Guide</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#basic-usage">Basic Usage</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#general-settings">General Settings</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#dynamic-menu">Dynamic Menu</a></li>
-                        
-                            <li><a class="toctree-l4" href="#excluding-dynamic-menu-from-certain-ui-elements">Excluding Dynamic Menu from Certain UI Elements</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#version-control-setup">Version Control Setup</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#diffing-with-external-diff-tools">Diffing with External Diff Tools</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#hiding-external-or-internal-diffing-from-context-menu">Hiding External or Internal Diffing from Context Menu</a></li>
-                        
-                    
-                    </ul>
+                    <li><a class="toctree-l4" href="#general-settings">General Settings</a></li>
                 
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
-                <a class="" href="../license/">License</a>
+                    <li><a class="toctree-l4" href="#dynamic-menu">Dynamic Menu</a></li>
                 
-            </li>
+                    <li><a class="toctree-l4" href="#version-control-setup">Version Control Setup</a></li>
+                
+                    <li><a class="toctree-l4" href="#diffing-with-external-diff-tools">Diffing with External Diff Tools</a></li>
+                
+                    <li><a class="toctree-l4" href="#hiding-external-or-internal-diffing-from-context-menu">Hiding External or Internal Diffing from Context Menu</a></li>
+                
+            
+            </ul>
         
-
-    
-</ul>
-
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../contributing/">Contributing & Support</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../license/">License</a>
+        
+    </li>
+<li>
+          
+        </ul>
       </div>
       &nbsp;
     </nav>
@@ -132,12 +134,12 @@
             <div class="section">
               
                 <h1 class="doctitle" id="user-guide"><a name="user-content-user-guide" href="#user-guide" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>User Guide</h1>
-<p class="doctitle-info">Using and configuring Easydiff.<br /></p>
+<p>Using and configuring Easydiff.</p>
 <hr />
-<h1 id="basic-usage"><a name="user-content-basic-usage" href="#basic-usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Basic Usage</h1>
+<h2 id="basic-usage"><a name="user-content-basic-usage" href="#basic-usage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Basic Usage</h2>
 <p>Easy diff is easy to use.  Simply select the <code>Set Left Side</code> option in the context menus to set what is to be compared on the left side when in a view.  Then select the what to compare to via <code>Compare with</code> menu option (select the right side view first if comparing to a view).</p>
 <p>For version control, just select the applicable option when in a view that is versioned controlled.</p>
-<h1 id="general-settings"><a name="user-content-general-settings" href="#general-settings" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>General Settings</h1>
+<h2 id="general-settings"><a name="user-content-general-settings" href="#general-settings" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>General Settings</h2>
 <p>Easy diff, by default, shows diffs in a separate view, you can display the diff in an output panel if desired using the following setting:</p>
 <div class="codehilite"><pre>    <span class="c1">// If enabled, this allows for multiple selections.</span>
     <span class="c1">// Each selection is separated with a new line.</span>
@@ -157,16 +159,16 @@
 </pre></div>
 
 
-<h1 id="dynamic-menu"><a name="user-content-dynamic-menu" href="#dynamic-menu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dynamic Menu</h1>
+<h2 id="dynamic-menu"><a name="user-content-dynamic-menu" href="#dynamic-menu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dynamic Menu</h2>
 <p>Easy diff creates a dynamic menu in <code>User/EasyDiff/Context.sublime-menu</code>, <code>User/EasyDiff/Tab Context.sublime-menu</code>, and <code>User/EasyDiff/Side Bar.sublime-menu</code>.  The content of this context menu changes depending on what is enabled or disabled, hidden or shown, and depending on whether a view, selection, or clipboard has been selected for left side compare.  If a view that was previously set has been closed, that view will no longer be reported in the context menu.  You can look here to see how the commands are constructed if you would like to bind the options to shortcuts or to the command palette.</p>
-<h2 id="excluding-dynamic-menu-from-certain-ui-elements"><a name="user-content-excluding-dynamic-menu-from-certain-ui-elements" href="#excluding-dynamic-menu-from-certain-ui-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Excluding Dynamic Menu from Certain UI Elements</h2>
+<h3 id="excluding-dynamic-menu-from-certain-ui-elements"><a name="user-content-excluding-dynamic-menu-from-certain-ui-elements" href="#excluding-dynamic-menu-from-certain-ui-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Excluding Dynamic Menu from Certain UI Elements</h3>
 <p>Easy diff shows access commands in the view, tab, and sidebar context menu.  If it is desired to exclude access in one of these UI elements, you can remove the element from the following setting:</p>
 <div class="codehilite"><pre>    <span class="c1">// Menus to show (view|tab|sidebar)</span>
     <span class="s2">&quot;menu_types&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;view&quot;</span><span class="p">,</span> <span class="s2">&quot;tab&quot;</span><span class="p">,</span> <span class="s2">&quot;sidebar&quot;</span><span class="p">],</span>
 </pre></div>
 
 
-<h1 id="version-control-setup"><a name="user-content-version-control-setup" href="#version-control-setup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Version Control Setup</h1>
+<h2 id="version-control-setup"><a name="user-content-version-control-setup" href="#version-control-setup" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Version Control Setup</h2>
 <p>EasyDiff currently supports SVN, Git, and Mercurial.  These options should only appear in the context menus if EasyDiff can find the binaries <code>svn</code>, <code>git</code>, and <code>hg</code> respectively.</p>
 <p>If one of these options shows up, and you wish to disable them, you can go to your settings file and disable them completely with the following settings:</p>
 <div class="codehilite"><pre>    <span class="c1">// Turn off svn completely</span>
@@ -214,7 +216,7 @@
 </pre></div>
 
 
-<h1 id="diffing-with-external-diff-tools"><a name="user-content-diffing-with-external-diff-tools" href="#diffing-with-external-diff-tools" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Diffing with External Diff Tools</h1>
+<h2 id="diffing-with-external-diff-tools"><a name="user-content-diffing-with-external-diff-tools" href="#diffing-with-external-diff-tools" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Diffing with External Diff Tools</h2>
 <p>Easy diff, by default, has options to diff everything internally in a single view.  But, it can be configured to diff in external tools instead.</p>
 <p>Configure the external binary setting to point to diff tool binary, and then enable external diff options:</p>
 <div class="codehilite"><pre>    <span class="c1">// Show external options (options to send files to external diff tool)</span>
@@ -233,7 +235,7 @@ java -Ddw.path<span class="o">=</span><span class="nv">$DW_PATH</span> -jar <spa
 </pre></div>
 
 
-<h1 id="hiding-external-or-internal-diffing-from-context-menu"><a name="user-content-hiding-external-or-internal-diffing-from-context-menu" href="#hiding-external-or-internal-diffing-from-context-menu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hiding External or Internal Diffing from Context Menu</h1>
+<h2 id="hiding-external-or-internal-diffing-from-context-menu"><a name="user-content-hiding-external-or-internal-diffing-from-context-menu" href="#hiding-external-or-internal-diffing-from-context-menu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hiding External or Internal Diffing from Context Menu</h2>
 <p>EasyDiff allows you to hide either internal diffing options, external diffing options, or both.  The later options is useful if you do not use the context menu, but have bound the commands to keyboard shortcuts or to the command palette.</p>
 <p>The settings are:<br />
 <div class="codehilite"><pre>    <span class="c1">// Show internal diff options (Easy Diff in a view or buffer)</span>
@@ -250,10 +252,10 @@ java -Ddw.path<span class="o">=</span><span class="nv">$DW_PATH</span> -jar <spa
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../license/" class="btn btn-neutral float-right" title="License"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="Contributing & Support"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -284,17 +286,13 @@ java -Ddw.path<span class="o">=</span><span class="nv">$DW_PATH</span> -jar <spa
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../license/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../contributing/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
 
-<!--
-MkDocs version      : 0.13.0.dev
-Docs Build Date UTC : 2015-04-29 00:37:00.634464
--->
 </body>
 </html>

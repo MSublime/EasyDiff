@@ -3,7 +3,7 @@
         {
             "location": "/", 
             "text": "EasyDiff\n\n\nDiff plugin for Sublime Text\n\n\n\n\nOverview\n\n\nEasy diff is a diff tool for comparing files in Sublime Text in special diff tabs or in your preferred external diff viewer.\n\n\n\n\nFeatures\n\n\n\n\nAllows comparing views, selections, multi-selections, and clipboard combinations.\n\n\nCan compare working copy against the base or previous revision of a file in SVN, Git, and Mercurial (requires some setup and configuration).\n\n\nDynamic context menus for selecting left side and right side compare.  Dynamic menus show what file is on \nleft\n side (think Beyond Compare context menus on windows).\n\n\nView diffs in a view buffer or output panel\n\n\nYou can selectively hide version control menus or disable the command completely via the settings file.\n\n\nCan open diffs in external diff programs if desired (requires some setup and configuration)\n\n\nShow only internal diff options, only external options, or show both depending on your needs and preferences.", 
-            "title": "Home"
+            "title": "About EasyDiff"
         }, 
         {
             "location": "/#easydiff", 
@@ -19,6 +19,26 @@
             "location": "/#features", 
             "text": "Allows comparing views, selections, multi-selections, and clipboard combinations.  Can compare working copy against the base or previous revision of a file in SVN, Git, and Mercurial (requires some setup and configuration).  Dynamic context menus for selecting left side and right side compare.  Dynamic menus show what file is on  left  side (think Beyond Compare context menus on windows).  View diffs in a view buffer or output panel  You can selectively hide version control menus or disable the command completely via the settings file.  Can open diffs in external diff programs if desired (requires some setup and configuration)  Show only internal diff options, only external options, or show both depending on your needs and preferences.", 
             "title": "Features"
+        }, 
+        {
+            "location": "/installation/", 
+            "text": "Installation\n\n\nInstalling EasyDiff.\n\n\n\n\nPackage Control\n\n\nThe recommended way to install EasyDiff is via \nPackage Control\n.  Package Control will install the correct branch on your system and keep it up to date.\n\n\n\n\n\n\nEnsure Package Control is installed.  Instructions are found \nhere\n.\n\n\n\n\n\n\nIn sublime, press \nctrl\n + \nshift\n + \np\n (Win, Linux) or \ncmd\n + \nshift\n + \np\n (OSX) to bring up the quick panel.  It will show a list of installable plugins.\n\n\n\n\n\n\nStart typing \nEasyDiff\n, when you see it, select it.\n\n\n\n\n\n\nRestart to be sure everything is loaded proper.\n\n\n\n\n\n\nEnjoy!\n\n\n\n\n\n\nGit Cloning\n\n\n\n\nWarning\n\n\nThis is not the recommended way to install EasyDiff for the casual user as it requires the user to know which branch to install, know how to use git, and \nwill not\n get automatically updated.\n\n\nIf you are forking for a pull request, this is the way to go, just replace the official repository with the link for your fork.\n\n\n\n\n\n\n\n\nQuit Sublime Text.\n\n\n\n\n\n\nOpen a terminal:\n\n\ncd /path/to/Sublime Text 3/Packages\ngit clone https://github.com/facelessuser/EasyDiff.git EasyDiff\n\n\n\n\n\n\n\n\n\n3 Restart Sublime Text.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/installation/#installation", 
+            "text": "Installing EasyDiff.", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/installation/#package-control", 
+            "text": "The recommended way to install EasyDiff is via  Package Control .  Package Control will install the correct branch on your system and keep it up to date.    Ensure Package Control is installed.  Instructions are found  here .    In sublime, press  ctrl  +  shift  +  p  (Win, Linux) or  cmd  +  shift  +  p  (OSX) to bring up the quick panel.  It will show a list of installable plugins.    Start typing  EasyDiff , when you see it, select it.    Restart to be sure everything is loaded proper.    Enjoy!", 
+            "title": "Package Control"
+        }, 
+        {
+            "location": "/installation/#git-cloning", 
+            "text": "Warning  This is not the recommended way to install EasyDiff for the casual user as it requires the user to know which branch to install, know how to use git, and  will not  get automatically updated.  If you are forking for a pull request, this is the way to go, just replace the official repository with the link for your fork.     Quit Sublime Text.    Open a terminal:  cd /path/to/Sublime Text 3/Packages\ngit clone https://github.com/facelessuser/EasyDiff.git EasyDiff    3 Restart Sublime Text.", 
+            "title": "Git Cloning"
         }, 
         {
             "location": "/usage/", 
@@ -42,13 +62,8 @@
         }, 
         {
             "location": "/usage/#dynamic-menu", 
-            "text": "Easy diff creates a dynamic menu in  User/EasyDiff/Context.sublime-menu ,  User/EasyDiff/Tab Context.sublime-menu , and  User/EasyDiff/Side Bar.sublime-menu .  The content of this context menu changes depending on what is enabled or disabled, hidden or shown, and depending on whether a view, selection, or clipboard has been selected for left side compare.  If a view that was previously set has been closed, that view will no longer be reported in the context menu.  You can look here to see how the commands are constructed if you would like to bind the options to shortcuts or to the command palette.", 
+            "text": "Easy diff creates a dynamic menu in  User/EasyDiff/Context.sublime-menu ,  User/EasyDiff/Tab Context.sublime-menu , and  User/EasyDiff/Side Bar.sublime-menu .  The content of this context menu changes depending on what is enabled or disabled, hidden or shown, and depending on whether a view, selection, or clipboard has been selected for left side compare.  If a view that was previously set has been closed, that view will no longer be reported in the context menu.  You can look here to see how the commands are constructed if you would like to bind the options to shortcuts or to the command palette.  Excluding Dynamic Menu from Certain UI Elements  Easy diff shows access commands in the view, tab, and sidebar context menu.  If it is desired to exclude access in one of these UI elements, you can remove the element from the following setting:       // Menus to show (view|tab|sidebar) \n     menu_types :   [ view ,   tab ,   sidebar ],", 
             "title": "Dynamic Menu"
-        }, 
-        {
-            "location": "/usage/#excluding-dynamic-menu-from-certain-ui-elements", 
-            "text": "Easy diff shows access commands in the view, tab, and sidebar context menu.  If it is desired to exclude access in one of these UI elements, you can remove the element from the following setting:       // Menus to show (view|tab|sidebar) \n     menu_types :   [ view ,   tab ,   sidebar ],", 
-            "title": "Excluding Dynamic Menu from Certain UI Elements"
         }, 
         {
             "location": "/usage/#version-control-setup", 
@@ -64,6 +79,41 @@
             "location": "/usage/#hiding-external-or-internal-diffing-from-context-menu", 
             "text": "EasyDiff allows you to hide either internal diffing options, external diffing options, or both.  The later options is useful if you do not use the context menu, but have bound the commands to keyboard shortcuts or to the command palette.  The settings are:       // Show internal diff options (Easy Diff in a view or buffer) \n     show_internal :   true , \n\n     // Show external options (options to send files to external diff tool) \n     show_external :   false ,", 
             "title": "Hiding External or Internal Diffing from Context Menu"
+        }, 
+        {
+            "location": "/contributing/", 
+            "text": "Contributing \n Support\n\n\nSteps for contributing and getting support.\n\n\n\n\nOverview\n\n\n\n\n\n\n\n\nSublime Versions\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nST3\n\n\nFully supported and actively maintained.\n\n\n\n\n\n\n\n\nContribution from the community is encouraged and can be done in a variety of ways:\n\n\n\n\nBug reports.\n\n\nReviewing code.\n\n\nCode patches via pull requests.\n\n\nDocumentation improvements via pull requests.\n\n\n\n\nBug Reports\n\n\n\n\n\n\nPlease \nread the documentation\n and \nsearch the issue tracker\n to try to find the answer to your question \nbefore\n posting an issue.\n\n\n\n\n\n\nWhen creating an issue on the repository, please provide as much info as possible:\n\n\n\n\nSublime Text build.\n\n\nOperating system.\n\n\nErrors in console.\n\n\nDetailed description of the problem.\n\n\nExamples for reproducing the error.  You can post pictures, but if specific text or code is required to reproduce the issue, please provide the text in a plain text format for easy copy/paste.\n\n\n\n\nThe more info provided the greater the chance someone will take the time to answer, implement, or fix the issue.\n\n\n\n\n\n\nBe prepared to answer questions and provide additional information if required.  Issues in which the creator refuses to respond to follow up questions will be marked as stale and closed.\n\n\n\n\n\n\nReviewing Code\n\n\nTake part in reviewing pull requests and/or reviewing direct commits.  Make suggestions to improve the code and discuss solutions to overcome weakness in the algorithm.\n\n\nPull Requests\n\n\nPull requests are welcome, and if you plan on contributing directly to the code, there are a couple of things to be mindful of.\n\n\nContinuous integration tests on are run on all pull requests and commits via Travis CI.  When making a pull request, the tests will automatically be run, and the request must pass to be accepted.  You can (and should) run these tests before pull requesting.  If it is not possible to run these tests locally, they will be run when the pull request is made, but it is strongly suggested that requesters make an effort to verify before requesting to allow for a quick, smooth merge.\n\n\nFeel free to use a virtual environment if you are concerned about installing any of the Python packages.  In the future, I may use tox, but as I currently only test on Python 3.3, I wanted to keep things simple.\n\n\nRunning Validation Tests\n\n\n\n\nTip\n\n\nIf you are running Sublime on a OSX or Linux/Unix system, you run all tests by by running the shell script (assuming you have installed your environment fulfills all requirements below):\n\n\nchmod +x run_tests.sh\n./run_tests.sh\n\n\n\n\n\n\n\nThere are a couple of dependencies that must be present before running the tests.\n\n\n\n\n\n\nAs \nST3\n is the only current actively supported version, Python 3.3 must be used to validate the tests.\n\n\n\n\n\n\nUnit tests are run with \nnose\n.  You can install nose via:\n\n\npip install nose\n\n\n\n\n\nThe tests should be run from the root folder of the plugin by using the following command:\n\n\nnosetests .\n\n\n\n\n\n\n\n\n\nLinting is performed on the entire project with \nflake8\n \nflake8_docstrings\n, \npep8-naming\n.  These can be installed via:\n\n\npip install flake8\npip install flake8_docstrings\npip install pep8-naming\n\n\n\n\n\nLinting is performed with the following command:\n\n\nflake8 .\n\n\n\n\n\n\n\n\n\nDocumentation Improvements\n\n\nA ton of time has been not only creating and supporting this plugin, but also spent making this documentation.  If you feel it is still lacking, show your appreciation for the plugin by helping to improve the documentation.  Help with documentation is always appreciated and can be done via pull requests.  There shouldn\nt be any need to run validation tests if only updating documentation.\n\n\nI currently use a combination of using [mkdocs][mkdocs.org] with my own custom Python Markdown \nextensions\n to render the docs.  You can preview the docs if you install these two packages.  The command for previewing the docs is \nmkdocs serve\n.", 
+            "title": "Contributing & Support"
+        }, 
+        {
+            "location": "/contributing/#contributing-support", 
+            "text": "Steps for contributing and getting support.", 
+            "title": "Contributing  Support"
+        }, 
+        {
+            "location": "/contributing/#overview", 
+            "text": "Sublime Versions  Description      ST3  Fully supported and actively maintained.     Contribution from the community is encouraged and can be done in a variety of ways:   Bug reports.  Reviewing code.  Code patches via pull requests.  Documentation improvements via pull requests.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/contributing/#bug-reports", 
+            "text": "Please  read the documentation  and  search the issue tracker  to try to find the answer to your question  before  posting an issue.    When creating an issue on the repository, please provide as much info as possible:   Sublime Text build.  Operating system.  Errors in console.  Detailed description of the problem.  Examples for reproducing the error.  You can post pictures, but if specific text or code is required to reproduce the issue, please provide the text in a plain text format for easy copy/paste.   The more info provided the greater the chance someone will take the time to answer, implement, or fix the issue.    Be prepared to answer questions and provide additional information if required.  Issues in which the creator refuses to respond to follow up questions will be marked as stale and closed.", 
+            "title": "Bug Reports"
+        }, 
+        {
+            "location": "/contributing/#reviewing-code", 
+            "text": "Take part in reviewing pull requests and/or reviewing direct commits.  Make suggestions to improve the code and discuss solutions to overcome weakness in the algorithm.", 
+            "title": "Reviewing Code"
+        }, 
+        {
+            "location": "/contributing/#pull-requests", 
+            "text": "Pull requests are welcome, and if you plan on contributing directly to the code, there are a couple of things to be mindful of.  Continuous integration tests on are run on all pull requests and commits via Travis CI.  When making a pull request, the tests will automatically be run, and the request must pass to be accepted.  You can (and should) run these tests before pull requesting.  If it is not possible to run these tests locally, they will be run when the pull request is made, but it is strongly suggested that requesters make an effort to verify before requesting to allow for a quick, smooth merge.  Feel free to use a virtual environment if you are concerned about installing any of the Python packages.  In the future, I may use tox, but as I currently only test on Python 3.3, I wanted to keep things simple.  Running Validation Tests   Tip  If you are running Sublime on a OSX or Linux/Unix system, you run all tests by by running the shell script (assuming you have installed your environment fulfills all requirements below):  chmod +x run_tests.sh\n./run_tests.sh   There are a couple of dependencies that must be present before running the tests.    As  ST3  is the only current actively supported version, Python 3.3 must be used to validate the tests.    Unit tests are run with  nose .  You can install nose via:  pip install nose  The tests should be run from the root folder of the plugin by using the following command:  nosetests .    Linting is performed on the entire project with  flake8   flake8_docstrings ,  pep8-naming .  These can be installed via:  pip install flake8\npip install flake8_docstrings\npip install pep8-naming  Linting is performed with the following command:  flake8 .", 
+            "title": "Pull Requests"
+        }, 
+        {
+            "location": "/contributing/#documentation-improvements", 
+            "text": "A ton of time has been not only creating and supporting this plugin, but also spent making this documentation.  If you feel it is still lacking, show your appreciation for the plugin by helping to improve the documentation.  Help with documentation is always appreciated and can be done via pull requests.  There shouldn t be any need to run validation tests if only updating documentation.  I currently use a combination of using [mkdocs][mkdocs.org] with my own custom Python Markdown  extensions  to render the docs.  You can preview the docs if you install these two packages.  The command for previewing the docs is  mkdocs serve .", 
+            "title": "Documentation Improvements"
         }, 
         {
             "location": "/license/", 
